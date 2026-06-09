@@ -60,6 +60,7 @@ class App extends Component {
           onDelete={this.deleteContact}
           filter={filter}
         />
+        <GlobalStyle />
       </>
     );
   }

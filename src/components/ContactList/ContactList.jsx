@@ -1,13 +1,13 @@
 import { Component } from "react";
 
-import { Contact, Text } from './ContactList.styled'
+import { List, Contact, Text } from './ContactList.styled'
 
 class ContactList extends Component {
   render() {
     const { contacts, onDelete, filter } = this.props;
 
     return (
-      <ul>
+      <List>
         {contacts
           .filter(({ name }) =>
             name.toLowerCase().includes(filter.toLowerCase()),
@@ -22,7 +22,7 @@ class ContactList extends Component {
               </button>
             </Contact>
           ))}
-      </ul>
+      </List>
     );
   }
 }

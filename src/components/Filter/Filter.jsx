@@ -1,5 +1,7 @@
 import { Component } from "react"
 
+import { FilterDiv } from "./Filter.styled";
+
 class Filter extends Component {
     
     state = {
@@ -17,10 +19,10 @@ class Filter extends Component {
 
     render() {
         return (
-            <div>
+            <FilterDiv>
                 <label htmlFor="filter">Find contacts by name</label>
                 <input type="text" value={this.state.filter} name="filter" onChange={this.handleChange}/>
-            </div>
+            </FilterDiv>
         )
     }
 }
